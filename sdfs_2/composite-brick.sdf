@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="brick_platform">
+    <!-- Base layer (9x9) -->
+    <link name="base_layer">
+      <pose>0 0 0.05 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.3 0.1 1.0</ambient>
+          <diffuse>0.8 0.3 0.1 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Second layer (6x6) -->
+    <link name="second_layer">
+      <pose>0 0 0.15 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>.5 .5 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.3 0.1 1.0</ambient>
+          <diffuse>0.8 0.3 0.1 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>.5 .5 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Pillar (4x4x5) -->
+    <link name="pillar">
+      <pose>0 0 .35 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>.25 .25 .5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.3 0.1 1.0</ambient>
+          <diffuse>0.8 0.3 0.1 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>.25 .25 .4</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Fixed joints to connect the layers -->
+    <joint name="base_to_second" type="fixed">
+      <parent>base_layer</parent>
+      <child>second_layer</child>
+    </joint>
+
+    <joint name="second_to_pillar" type="fixed">
+      <parent>second_layer</parent>
+      <child>pillar</child>
+    </joint>
+  </model>
+</sdf>

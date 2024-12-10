@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<sdf xmlns:drake="http://drake.mit.edu" version="1.8">
+  <model name='slingshot'>
+    <link name='slingshot'>
+      <inertial>
+        <pose>0.019913987387879476 0.0007479557633047364 0.6221379762138273 0 0 0</pose>
+        <mass>6.8283569639035955</mass>
+        <inertia>
+          <ixx>0.5192734259439936</ixx>
+          <ixy>8.121696191434369e-05</ixy>
+          <ixz>-0.004311508316864048</ixz>
+          <iyy>0.5877903194136571</iyy>
+          <iyz>-0.0014868083034691498</iyz>
+          <izz>0.07342129588910919</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>slingshot.obj</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      
+    </link>
+  </model>
+</sdf>

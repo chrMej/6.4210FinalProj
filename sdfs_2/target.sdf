@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="angry_birds_pig">
+    <link name="pig_body">
+      <inertial>
+        <mass>0.35</mass>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.1</iyy>
+          <iyz>0</iyz>
+          <izz>0.1</izz>
+        </inertia>
+      </inertial>
+      
+      <!-- Main body (sphere) -->
+      <visual name="body_visual">
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0.8 0 1</ambient>
+          <diffuse>0 0.8 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="body_collision">
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+      </collision>
+
+      <!-- Snout (smaller sphere) -->
+      <visual name="snout_visual">
+        <pose>0.09 0 -0.02 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.04</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0.7 0 1</ambient>
+          <diffuse>0 0.7 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="snout_collision">
+        <pose>0.09 0 -0.02 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.04</radius>
+          </sphere>
+        </geometry>
+      </collision>
+
+      <!-- Left ear (cylinder) -->
+      <visual name="left_ear_visual">
+        <pose>-0.05 0.08 0.08 0 -0.3 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.04</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.7 0 1</ambient>
+          <diffuse>0 0.7 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="left_ear_collision">
+        <pose>-0.05 0.08 0.08 0 -0.3 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.04</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <!-- Right ear (cylinder) -->
+      <visual name="right_ear_visual">
+        <pose>-0.05 -0.08 0.08 0 0.3 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.04</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.7 0 1</ambient>
+          <diffuse>0 0.7 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="right_ear_collision">
+        <pose>-0.05 -0.08 0.08 0 0.3 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.04</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <!-- Left eye (small sphere) -->
+      <visual name="left_eye_visual">
+        <pose>0.08 0.04 0.03 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- Right eye (small sphere) -->
+      <visual name="right_eye_visual">
+        <pose>0.08 -0.04 0.03 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.015</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- Left nostril (tiny sphere) -->
+      <visual name="left_nostril_visual">
+        <pose>0.13 0.015 -0.03 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+
+      <!-- Right nostril (tiny sphere) -->
+      <visual name="right_nostril_visual">
+        <pose>0.13 -0.015 -0.03 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
